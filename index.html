@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#260806">
+    <meta name="description" content="VAUNDY ASIA ARENA TOUR 2026 “HORO” TAIPEI 應援指南">
+    <title>VAUNDY “HORO” — TAIPEI 應援指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <button class="theme-toggle icon-button" type="button" aria-label="切換至淺色模式" title="切換色彩主題">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.7"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.4 8.4 0 0 1 8.8 3.8 8.7 8.7 0 1 0 20.2 15.2Z"/></svg>
+      </button>
+
+      <header class="hero">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">ASIA ARENA TOUR 2026</p>
+          <h1><span>VAUNDY</span><strong>“HORO”</strong></h1>
+          <div class="event-dates" aria-label="演出日期及時間">
+            <div class="date-row"><span>10.31 <small>六</small></span><time>19:00</time></div>
+            <div class="date-row"><span>11.01 <small>日</small></span><time>19:00</time></div>
+            <p class="venue">TAIPEI ARENA, TAIPEI</p>
+          </div>
+          <button class="guide-cta" type="button" data-route="guide">
+            應援指南 <span class="cta-tag">無劇透</span><span class="cta-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="guide-view" id="guide-view" aria-label="應援指南" hidden>
+        <div class="guide-topbar">
+          <button class="guide-back" type="button" data-guide-back aria-label="返回首頁"><span aria-hidden="true">←</span></button>
+          <button class="guide-theme-toggle icon-button" type="button" aria-label="切換至淺色模式" title="切換色彩主題">
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.7"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.4 8.4 0 0 1 8.8 3.8 8.7 8.7 0 1 0 20.2 15.2Z"/></svg>
+          </button>
+        </div>
+
+        <div class="guide-list-page">
+          <header class="guide-intro">
+            <h2>應援指南 <span class="guide-spoiler-badge">無劇透</span></h2>
+            <p>選擇歌曲，搭配影片查看應援重點</p>
+            <div class="guide-legend" aria-label="應援標示說明">
+              <span><i class="legend-icon chorus">🎤</i>大合唱 <b>12</b> 行</span>
+              <span><i class="legend-icon clap">👏</i>拍手</span>
+              <span><i class="legend-icon wave">👋</i>揮手</span>
+              <span><i class="legend-icon jump">↟</i>跳躍</span>
+              <span><i class="legend-icon arms">↻</i>轉臂</span>
+            </div>
+            <p class="guide-caption">數字代表目前應援版本的大合唱行數。<br>拍手・揮手提示會顯示在歌曲頁面。</p>
+          </header>
+
+          <details class="version-notes">
+            <summary><span>應援版本說明</span><span class="version-plus">＋</span></summary>
+            <div class="version-notes-body">
+              <p>本指南整理歌曲應援提示，方便演出前快速熟悉。</p>
+              <p>歌曲名稱旁的數字為應援段落數；動作提示僅供參考，請以現場及主辦單位公告為準。</p>
+              <p>本頁不重製歌詞，請至歌曲影片確認原文及字幕。</p>
+            </div>
+          </details>
+
+          <div class="song-search">
+            <label for="song-search-input">搜尋歌曲</label>
+            <div class="search-control"><span aria-hidden="true">⌕</span><input id="song-search-input" type="search" placeholder="搜尋歌曲名稱・編號" autocomplete="off"><button type="button" class="search-clear" aria-label="清除" hidden>×</button></div>
+          </div>
+
+          <div class="song-sort" role="group" aria-label="歌曲清單排序">
+            <button type="button" data-sort="default" aria-pressed="true">預設</button>
+            <button type="button" data-sort="name" aria-pressed="false">名稱</button>
+            <button type="button" data-sort="chorus" aria-pressed="false">大合唱</button>
+          </div>
+          <p class="song-result-count" aria-live="polite"></p>
+          <p class="empty-songs" hidden>找不到歌曲，請輸入部分歌曲名稱或歌曲編號。</p>
+          <ul class="song-list" aria-label="歌曲清單"></ul>
+        </div>
+
+        <article class="guide-song-page" hidden>
+          <div class="song-detail-heading">
+            <p class="eyebrow">TAIPEI · FAN CHANT GUIDE</p>
+            <h2 class="song-detail-title"></h2>
+            <nav class="song-navigation" aria-label="切換歌曲">
+              <button type="button" data-song-step="-1">← 上一首</button>
+              <span class="song-step-label"></span>
+              <button type="button" data-song-step="1">下一首 →</button>
+            </nav>
+          </div>
+          <div class="song-video-card">
+            <div class="song-video-frame"></div>
+            <div class="song-video-meta"><span>搭配影片熟悉歌曲與應援提示。</span><a class="youtube-link" target="_blank" rel="noreferrer">在 YouTube 觀看 ↗</a></div>
+          </div>
+          <div class="song-actions">
+            <span class="song-action-chorus"></span>
+            <span class="song-action-tags"></span>
+            <button type="button" class="song-help-toggle" aria-expanded="false">應援說明 <span>⌄</span></button>
+          </div>
+          <div class="song-help" hidden>大合唱數字為目前應援版本標示的行數；拍手、揮手等動作提示請依現場氣氛參與。原文歌詞及字幕請至影片查看。</div>
+          <div class="chorus-guide">
+            <div class="chorus-guide-heading"><span class="guide-line-icon">♫</span><div><h3>應援重點</h3><p class="chorus-guide-count"></p></div></div>
+            <div class="chorus-cues"></div>
+            <p class="chorus-copyright-note">歌詞內容如有差異，請以官方發行版本為準；應援請依現場公告參與。</p>
+          </div>
+          <details class="lyrics-section" hidden>
+            <summary><span>歌詞</span><span class="lyrics-chevron">⌄</span></summary>
+            <div class="lyrics-content">
+              <div class="lyrics-line"><p class="lyrics-japanese">むせるほど、猛烈な</p><p class="lyrics-romaji">museru hodo mooretsu na</p><p class="lyrics-translation">濃烈得 幾欲讓人窒息</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">時間が経っている</p><p class="lyrics-romaji">jikan ga tatte iru</p><p class="lyrics-translation">漫長的歲月 悄然流逝</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">喉の奥、堤防は</p><p class="lyrics-romaji">nodo no oku teiboo wa</p><p class="lyrics-translation">在喉嚨深處的 堤防之上</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">苔が詰まって</p><p class="lyrics-romaji">koke ga tsumatte</p><p class="lyrics-translation">早已覆滿了 青苔</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">そのドキドキを</p><p class="lyrics-romaji">sono dokidoki o</p><p class="lyrics-translation">為了讓這份 怦然心動</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">忘れぬよう</p><p class="lyrics-romaji">wasurenu yoo</p><p class="lyrics-translation">永不被淡忘</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">記憶の波に</p><p class="lyrics-romaji">kioku no nami ni</p><p class="lyrics-translation">為了不讓它</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">紛れぬよう</p><p class="lyrics-romaji">magirenu yoo</p><p class="lyrics-translation">湮沒在記憶的 洪流之中</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">君の気まぐれに、そっと肩を寄せ</p><p class="lyrics-romaji">kimi no kimagure ni sotto kata o yose</p><p class="lyrics-translation">順應著你的反覆無常 輕輕依偎在你的肩頭</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">二人あせばむ時間を詩にしよう。</p><p class="lyrics-romaji">futari asebamu jikan o uta ni shiyoo</p><p class="lyrics-translation">將你我微微出汗的時光 悉數譜寫成詩吧</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">ひゅるり</p><p class="lyrics-romaji">hyururi</p><p class="lyrics-translation">呼嚕嚕地</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">首元、風の音</p><p class="lyrics-romaji">kubimoto kaze no oto</p><p class="lyrics-translation">掠過頸間的 風聲</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">今、涼しさを感じている。</p><p class="lyrics-romaji">ima suzushisa o kanjite iru</p><p class="lyrics-translation">在此刻 終於感受到了些許涼意</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">君の気まぐれで、</p><p class="lyrics-romaji">kimi no kimagure de</p><p class="lyrics-translation">因為你的 反覆無常</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">ふわぁっと咲く花と</p><p class="lyrics-romaji">fuwaatto saku hana to</p><p class="lyrics-translation">那驟然 悄悄綻放的花朵</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">そこで鳴り止まぬ蝉を詩にしよう。</p><p class="lyrics-romaji">soko de nariyamanu semi o uta ni shiyoo</p><p class="lyrics-translation">與在那兒鳴叫不止的夏蟬 一同譜寫成詩吧</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">ひゅるり</p><p class="lyrics-romaji">hyururi</p><p class="lyrics-translation">呼嚕嚕地</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">指先、触れる音</p><p class="lyrics-romaji">yubisaki fureru oto</p><p class="lyrics-translation">指尖 輕輕觸碰的呢喃</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">まだ、愛しさを感じているまま。</p><p class="lyrics-romaji">mada itoshisa o kanjite iru mama</p><p class="lyrics-translation">就這樣 依然沉浸在滿腔的愛意之中</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">かがむほど、強烈な</p><p class="lyrics-romaji">kagamanu hodo kyooretsu na</p><p class="lyrics-translation">強烈得 令人不禁弓起身體</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">時間が経っている</p><p class="lyrics-romaji">jikan ga tatte iru</p><p class="lyrics-translation">漫長的歲月 悄然流逝</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">筋残る、乳酸は</p><p class="lyrics-romaji">suji nokoru nyuusan wa</p><p class="lyrics-translation">殘留在肌肉線條裡的 乳酸</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">溜まり溜まって</p><p class="lyrics-romaji">tamari tamatte</p><p class="lyrics-translation">早已堆積 堆積得沉重不堪</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">そのドキドキが</p><p class="lyrics-romaji">sono dokidoki ga</p><p class="lyrics-translation">為了讓這份 怦然心動</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">薄れぬよう</p><p class="lyrics-romaji">usurenu yoo</p><p class="lyrics-translation">永不褪色</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">豪雨に打たれ</p><p class="lyrics-romaji">goou ni utare</p><p class="lyrics-translation">為了不讓它 在狂風暴雨的擊打下</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">錆びれぬよう</p><p class="lyrics-romaji">sabirenu yoo</p><p class="lyrics-translation">逐漸斑駁 腐蝕生鏽</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">君の気まぐれに、そっと肩を寄せ</p><p class="lyrics-romaji">kimi no kimagure ni sotto kata o yose</p><p class="lyrics-translation">順應著你的反覆無常 輕輕依偎在你的肩頭</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">二人あせばむ時間を詩にしよう。</p><p class="lyrics-romaji">futari asebamu jikan o uta ni shiyoo</p><p class="lyrics-translation">將你我微微出汗的時光 悉數譜寫成詩吧</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">ひゅるり</p><p class="lyrics-romaji">hyururi</p><p class="lyrics-translation">呼嚕嚕地</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">首元、風の音</p><p class="lyrics-romaji">kubimoto kaze no oto</p><p class="lyrics-translation">掠過頸間的 風聲</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">今、涼しさを感じているから</p><p class="lyrics-romaji">ima suzushisa o kanjite iru kara</p><p class="lyrics-translation">正因為在此刻 感受到了些許涼意</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">このドキドキが</p><p class="lyrics-romaji">kono dokidoki ga</p><p class="lyrics-translation">為了讓這份 怦然心動</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">途切れぬよう</p><p class="lyrics-romaji">togirenu yoo</p><p class="lyrics-translation">永不間斷</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">明日もその先も</p><p class="lyrics-romaji">asu mo sono saki mo</p><p class="lyrics-translation">為了在明日 以及更遙遠的未來</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">歌えるよう</p><p class="lyrics-romaji">utaeru yoo</p><p class="lyrics-translation">也依然能夠 縱情歌唱</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">君の気まぐれに、そっと肩を寄せ</p><p class="lyrics-romaji">kimi no kimagure ni sotto kata o yose</p><p class="lyrics-translation">順應著你的反覆無常 輕輕依偎在你的肩頭</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">二人あせばむ時間を詩にしよう。</p><p class="lyrics-romaji">futari asebamu jikan o uta ni shiyoo</p><p class="lyrics-translation">將你我微微出汗的時光 悉數譜寫成詩吧</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">ひゅるり</p><p class="lyrics-romaji">hyururi</p><p class="lyrics-translation">呼嚕嚕地</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">首元、風の音</p><p class="lyrics-romaji">kubimoto kaze no oto</p><p class="lyrics-translation">掠過頸間的 風聲</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">今、涼しさを感じている。</p><p class="lyrics-romaji">ima suzushisa o kanjite iru</p><p class="lyrics-translation">在此刻 終於感受到了些許涼意</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">君の気まぐれで、</p><p class="lyrics-romaji">kimi no kimagure de</p><p class="lyrics-translation">因為你的 反覆無常</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">ふわぁっと咲く花を</p><p class="lyrics-romaji">fuwaatto saku hana o</p><p class="lyrics-translation">那驟然 悄悄綻放的花朵</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">時を止めまたそれを詩にしよう。</p><p class="lyrics-romaji">toki o tome mata sore o uta ni shiyoo</p><p class="lyrics-translation">就讓時間定格 再次將它譜寫成詩吧</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">ひゅるり</p><p class="lyrics-romaji">hyururi</p><p class="lyrics-translation">呼嚕嚕地</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">指先、触れる音</p><p class="lyrics-romaji">yubisaki fureru oto</p><p class="lyrics-translation">指尖 輕輕觸碰的呢喃</p></div>
+              <div class="lyrics-line"><p class="lyrics-japanese">まだ、愛しさを感じていたいから。</p><p class="lyrics-romaji">mada itoshisa o kanjite itai kara</p><p class="lyrics-translation">因為我 依然想深深地 感受著這份愛意</p></div>
+            </div>
+          </details>
+        </article>
+        <footer class="guide-footer">VAUNDY “HORO” TAIPEI・非官方粉絲應援指南</footer>
+      </section>
+
+      <section class="content" aria-label="活動資訊">
+        <div class="accordion-list">
+          <details class="accordion">
+            <summary><span class="section-icon">ⓘ</span><span>演出資訊</span><span class="chevron"></span></summary>
+            <div class="accordion-body">
+              <h2 class="divider-title">| 演出概要 |</h2>
+              <dl class="info-list">
+                <dt>演出名稱</dt><dd>Vaundy ASIA ARENA TOUR 2026 “HORO” IN TAIPEI</dd>
+                <dt>日期／時間</dt><dd>2026.10.31（六）19:00 ／ 11.01（日）19:00 <small>兩天皆 17:30 開場・時間以官方公告為準</small></dd>
+                <dt>地點</dt><dd>台北小巨蛋 Taipei Arena <small>105037 臺北市松山區南京東路4段2號</small></dd>
+                <dt>入場規則</dt><dd>全場實名制 <small>入場請攜帶票券及填寫的有效證件正本；外籍觀眾依售票平台規定攜帶護照正本</small></dd>
+                <dt>票價</dt><dd><span class="price">NT$ 5,880</span><span class="price">NT$ 4,880</span><span class="price">NT$ 3,880</span><span class="price">NT$ 2,880</span><span class="price">NT$ 800</span><small>另收購票手續費</small></dd>
+                <dt>取票方式</dt><dd>依 Ticket Plus 遠大售票平台提供 <small>實名制資料請務必填寫正確，入場規定以售票平台公告為準</small></dd>
+                <dt>購票</dt><dd>Ticket Plus 遠大售票 <small>票務、實名制與入場問題請依售票平台最新公告確認</small></dd>
+              </dl>
+              <a class="text-link" href="https://ticketplus.com.tw/activity/6c3d8c24e0f00c9c84777615c001bebe" target="_blank" rel="noreferrer">前往 Ticket Plus 售票頁面 <span>↗</span></a>
+              <hr>
+              <h2 class="divider-title">| 觀眾入場資訊 |</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>項目</th><th>10/31（六）</th><th>11/1（日）</th><th>備註</th></tr></thead>
+                  <tbody>
+                    <tr><td>開場／入場</td><td>17:30</td><td>17:30</td><td>官方已公布</td></tr>
+                    <tr><td>正式演出</td><td>19:00</td><td>19:00</td><td>官方已公布</td></tr>
+                    <tr><td>周邊／物品寄放</td><td>待公告</td><td>待公告</td><td>請以主辦與場館公告為準</td></tr>
+                    <tr><td>演出結束</td><td>預計 21:00 左右</td><td>預計 21:00 左右</td><td>實際時間以現場為準</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="fine-print">※ 最新資訊請以主辦單位、Ticket Plus 與台北小巨蛋公告為準。</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary><span class="section-icon">▤</span><span>公告・指南</span><span class="chevron"></span></summary>
+            <div class="accordion-body">
+              <h2 class="divider-title">| 演出前請留意 |</h2>
+              <div class="notice-card"><span class="notice-mark">!</span><div><h3>請避免使用手機閃光燈</h3><p>舞台演出連燈光完全熄滅的瞬間都經過設計。觀眾席的一道光會打破黑暗，讓精心安排的畫面失去效果。</p></div></div>
+              <ul class="guide-list">
+                <li><strong>請勿錄音、錄影或拍照</strong><span>遵守現場公告，一起享受演出當下。</span></li>
+                <li><strong>提前確認入場所需證件</strong><span>依票券與售票平台公告準備有效證件正本。</span></li>
+                <li><strong>周邊與寄物資訊</strong><span>最新販售時間及場館規定請留意主辦單位公告。</span></li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary><span class="section-icon">▣</span><span>座位配置圖</span><span class="chevron"></span></summary>
+            <div class="accordion-body">
+              <h2 class="divider-title">| TAIPEI ARENA |</h2>
+              <button class="arena-map-preview" type="button" aria-label="點擊放大查看座位配置圖" data-map-open>
+                <img src="https://vaundy.fans/images/taipei-stage-map.webp" alt="VAUNDY HORO 台北場座位配置圖" loading="lazy">
+                <span>點擊放大檢視 <span aria-hidden="true">⌕</span></span>
+              </button>
+              <p class="fine-print">點擊圖片可放大檢視；實際配置請以主辦單位公告為準。</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary><span class="section-icon">⌖</span><span>交通方式</span><span class="chevron"></span></summary>
+            <div class="accordion-body">
+              <div class="transit-heading">
+                <div>
+                  <h2 class="divider-title">| 前往台北小巨蛋 |</h2>
+                  <p class="transit-address">105037 臺北市松山區南京東路4段2號</p>
+                </div>
+                <a class="map-link" href="https://maps.google.com/?q=台北市松山區南京東路4段2號" target="_blank" rel="noreferrer">在地圖中查看 <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="transit-card">
+                <span class="transit-number transit-label">捷運</span>
+                <div>
+                  <span class="recommended-badge">最推薦</span>
+                  <h3>① 松山新店線（綠線）</h3>
+                  <p>搭乘台北捷運松山新店線至 <strong>G17 台北小巨蛋站</strong>，從 <strong>2 號出口</strong> 出站即達。</p>
+                </div>
+              </div>
+              <div class="transit-card"><span class="transit-number bus">公車</span><div><h3>台北小巨蛋站</h3><p>多線公車可抵達，請以台北市公車動態資訊為準。</p></div></div>
+              <div class="transit-card"><span class="transit-number">P</span><div><h3>自行開車</h3><p>場館周邊停車位有限，演出日建議搭乘大眾運輸工具。</p></div></div>
+              <a class="venue-transport-link" href="https://www.arena.taipei/cp.aspx?n=459956E830D4A8BB" target="_blank" rel="noreferrer">
+                <span class="venue-transport-icon" aria-hidden="true">⌖</span>
+                <span class="venue-transport-copy"><strong>場館交通資訊</strong><small>查看台北小巨蛋官方交通方式</small></span>
+                <span class="venue-transport-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary><span class="section-icon">♡</span><span>應援禮儀・第一次參加</span><span class="chevron"></span></summary>
+            <div class="accordion-body">
+              <h2 class="divider-title">| 讓每個人都享受演出 |</h2>
+              <ul class="guide-list">
+                <li><strong>演出時請勿使用手機閃光燈</strong><span>配合舞台燈光設計，也尊重周圍觀眾。</span></li>
+                <li><strong>請勿高舉妨礙視線的物品</strong><span>手燈、扇子等請配合主辦單位規定使用。</span></li>
+                <li><strong>跟著現場氣氛應援就好</strong><span>不熟悉應援也沒關係，享受音樂最重要。</span></li>
+                <li><strong>留意周遭並保持通道暢通</strong><span>如有需要協助，請聯絡場館工作人員。</span></li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary><span class="section-icon">▧</span><span>VAWS 會員票卡</span><span class="chevron"></span></summary>
+            <div class="accordion-body">
+              <h2 class="divider-title">| VAWS MEMBER |</h2>
+              <p class="body-copy">VAWS MEMBERS 會員可在攤位領取「各公演原創票卡」，每場演出設計都不一樣。演出當天新入會的人也可以兌換。</p>
+              <dl class="member-ticket-details">
+                <dt>地點</dt><dd>台北小巨蛋 8 號門附近，前往「VAWS MEMBERS」攤位。</dd>
+                <dt>時間</dt><dd>10/31（六）12:00–21:30 ／ 11/1（日）12:00–19:00</dd>
+                <dt>對象</dt><dd>VAWS MEMBERS 會員</dd>
+              </dl>
+              <img class="member-ticket-card" src="https://vaundy.tiaui.co/images/notice/vaws-ticket-card-taipei.webp" alt="VAWS 台北公演原創票卡示意圖" loading="lazy">
+              <p class="member-ticket-caption">台北場公演別原創票卡（SAMPLE・左 10/31、右 11/1）</p>
+              <a class="text-link" href="https://member.vaundy.jp/" target="_blank" rel="noreferrer">VAWS 官方會員網站 <span>↗</span></a>
+            </div>
+          </details>
+
+          <div class="accordion-links">
+            <a class="accordion-link" href="https://vaundy.jp/?lang=en" target="_blank" rel="noreferrer"><span class="section-icon">↗</span><span>官方網站</span><span class="external-mark">↗</span></a>
+            <button class="accordion-link spoiler-link" type="button" data-open="spoiler"><span class="section-icon">♫</span><span>東京/首爾歌單</span><span class="spoiler-tag">含劇透</span><span class="chevron"></span></button>
+          </div>
+        </div>
+
+        <aside class="flash-notice">
+          <span class="notice-mark">!</span>
+          <div><h2>請避免使用手機閃光燈</h2><p>舞台演出連燈光完全熄滅的瞬間都經過設計。觀眾席的一道光會打破黑暗，讓精心安排的畫面失去效果。</p><p>若有全場一起舉燈的安排，演出中會另行通知。</p></div>
+        </aside>
+        <button class="share-button" type="button"><span aria-hidden="true">↗</span> 分享</button>
+      </section>
+
+      <footer class="footer">
+        <p>VAUNDY ASIA ARENA TOUR 2026 “HORO”・TAIWAN FAN CHANT GUIDE<br><span>（非官方粉絲製作） v1.11.1</span></p>
+        <div class="footer-links">
+          <a href="https://github.com/watain666/Vaundy-Taiwan-2026" target="_blank" rel="noreferrer">GitHub Repo <span>↗</span></a>
+          <a href="https://vaundy-seoul-2026.pages.dev/" target="_blank" rel="noreferrer">Fork from SEOUL 응원가이드 <span>↗</span></a>
+        </div>
+        <a class="creator-link" href="https://gall.dcinside.com/mgallery/board/view/?id=vaundy0606&amp;no=35550" target="_blank" rel="noreferrer">Thanks to the original Korean creator, 카쿠메.</a>
+        <div class="footer-bottom">
+          <a href="https://www.threads.com/@brainginger/post/DdiLWztgen9" target="_blank" rel="noreferrer">意見回饋</a>
+          <button type="button" data-open="changelog">更新日誌</button>
+        </div>
+      </footer>
+    </main>
+
+    <dialog class="modal compact-modal" id="spoiler-modal">
+      <div class="modal-header"><span class="modal-kicker">SPOILER ALERT</span><button class="close-button" type="button" data-close aria-label="關閉">×</button></div>
+      <div class="modal-content">
+        <p class="eyebrow">SETLIST</p>
+        <h2>東京 / 首爾歌單</h2>
+        <p class="modal-intro">以下內容含有演出歌單劇透，確定要繼續閱讀嗎？</p>
+        <button class="confirm-button" type="button" data-reveal>我知道了，顯示歌單</button>
+        <ol class="setlist" hidden>
+          <li>走馬灯</li><li>裸の勇者</li><li>怪獣の花唄</li><li>踊り子</li><li>CHAINSAW BLOOD</li><li>不可幸力</li><li>風神</li><li>恋風邪にのせて</li><li>replica</li><li>タイムパラドックス</li><li>しわあわせ</li><li>Tokimeki</li>
+        </ol>
+      </div>
+    </dialog>
+
+    <dialog class="modal compact-modal" id="changelog-modal">
+      <div class="modal-header"><span class="modal-kicker">WHAT'S NEW</span><button class="close-button" type="button" data-close aria-label="關閉">×</button></div>
+      <div class="modal-content">
+        <p class="eyebrow">VERSION 1.11.1</p>
+        <h2>更新日誌</h2>
+        <div class="log-entry"><time>2026.10.28</time><h3>演出資訊更新</h3><p>補充台北場入場時間及觀眾注意事項。</p></div>
+        <div class="log-entry"><time>2026.10.20</time><h3>應援指南更新</h3><p>整理演出當日交通與入場準備資訊。</p></div>
+      </div>
+    </dialog>
+    <dialog class="map-lightbox" id="map-lightbox" aria-label="座位配置圖放大檢視">
+      <div class="map-lightbox-toolbar">
+        <span>座位配置圖</span>
+        <button type="button" class="map-zoom-toggle" aria-pressed="false">放大</button>
+        <button type="button" class="close-button" data-map-close aria-label="關閉座位配置圖">×</button>
+      </div>
+      <div class="map-lightbox-scroll">
+        <img src="https://vaundy.fans/images/taipei-stage-map.webp" alt="VAUNDY HORO 台北場座位配置圖">
+      </div>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
